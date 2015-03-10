@@ -1,6 +1,6 @@
 <section id="item">
 
-    <div class="breadcrumb"><a ui-sref="home">Home / </a> <a ui-sref="men">Men / </a>{{item.name}}</div>
+    <div class="breadcrumb"><a ui-sref="home">Home / </a> <a ui-sref="{{item.gender}}">Men / </a>{{item.name}}</div>
     <div>&nbsp;</div>
     <!-- Row -->
     <div class="container pagecontainer">
@@ -43,7 +43,7 @@
             <div>
                 <div class="col-md-3 col-sm-3 col-xs-3 reviewshead"><h4 class="reviewstitle">Customer Reviews</h4></div>
                 <div class="col-md-4 col-sm-4 col-xs-4 writereview"><h4 class="reviewstitle" id="writelink"
-                                                                        ui-sref="review-entry">Write a review</h4></div>
+                                                                        ui-sref="review-entry({ name: item.name, url: item.imgUrl })">Write a review</h4></div>
             </div>
         </div>
         <!-- Row -->

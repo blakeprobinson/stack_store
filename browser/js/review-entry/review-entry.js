@@ -24,4 +24,8 @@ app.config(function ($stateProvider) {
 
 });
 
+// Inject the auth service into the session
+// getloggedinuser
+// isauthenticated
+
 

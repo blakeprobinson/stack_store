@@ -44,8 +44,8 @@ app.controller('itemCreateController', function ($scope, CreateItemFactory, getI
 
 	$scope.submitItem = function() {
 		//$scope.item.categories = $scope.item.categories.split(' ');
-		console.log('process started');
-		console.log($scope.item);
+		//console.log('process started');
+		//console.log($scope.item);
 		CreateItemFactory.postItem($scope.item).then(function(item, err){
 			if(err) $scope.success= false;
 			else{

@@ -9,12 +9,12 @@ app.config(function ($stateProvider) {
             console.log("in conroller", $scope);
 
             $scope.newReview = function () {
-            	console.log("inside newReview", $scope.productname);
+            	//console.log("inside newReview", $scope.productname);
             	var info = $scope.productname;
             	CreateReview.submitReview(info).then(function(user, err){
 	    					if (err) $scope.success = false;
 	    						else{
-                    $state.go('products');
+                    $state.go('home');
               	}
 	    				})
 	   				};

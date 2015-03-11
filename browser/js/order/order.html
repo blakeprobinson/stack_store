@@ -5,7 +5,7 @@
 		<button ng-click='deleteCookie()'>Delete Cookie</button>
 		<button ng-click='showOrderFromDb()'>Show myOrder in DB</button> -->
 
-		<button ng-click='goToCheckout()'>Checkout</button>
+		<button class='col-md-offset-1' ng-click='goToCheckout()'>Checkout</button>
 		<div class='summary row'>
 			<h4 class='total-cost col-md-offset-1'>Total Cost: {{sum | currency }}</h4>
 			
@@ -14,10 +14,10 @@
 		</div>
 
 		<div class='Categories row'>
-			<h2 class='col-md-2 '>Image</h3>
-			<h2 class='col-md-2 col-md-offset-1'>Name</h3>
-			<h2 class='col-md-2'>Price Per</h3>
-			<h2 class='col-md-2'>Quantity</h3>
+			<h3 class='col-md-2 '>Image</h3>
+			<h3 class='col-md-2 col-md-offset-1'>Name</h3>
+			<h3 class='col-md-2'>Price Per</h3>
+			<h3 class='col-md-2'>Quantity</h3>
 			</br>
 		</div>
 
@@ -30,9 +30,9 @@
 			<button type='button-danger' class='col-md-offset-1' ng-click='removeItem(line.item)'>Remove Item</button>
 		</div>
 		<div class = 'reviews'>
-			<h2>Past Orders</h2>
+			<h3>Past Orders</h3>
 			<ul>
-				<h3>TBD</h3>
+				<h4>No Previous Orders</h4>
 			</ul>
 		</div>
 	</div>

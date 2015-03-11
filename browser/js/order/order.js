@@ -68,8 +68,10 @@ app.controller('orderController', function ($scope, GetItemsFactory, OrderFactor
 			GetItemsFactory.getItems().then(function(items, err){ //approach will not scale well but is quicker now
 				if(err) console.log(err);
 				arrayOfOrderItems.forEach(function(itemPair){ //get all items, see which items are in the cart, 'populate' order items
-					for(var a=0, len=items.length; a<7; a++){
+					console.log('itemPair', itemPair, items[0]);
+					for(var a=0, len=items.length; a<len; a++){
 						if(itemPair.itemId === items[a]._id){
+							console.log('there was a connection made...');
 							productList.push({item: items[a], quantity: itemPair.quantity, price: itemPair.price });
 						}
 					}

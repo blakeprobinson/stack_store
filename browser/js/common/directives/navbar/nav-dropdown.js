@@ -26,10 +26,9 @@ app.controller('dropdownController', function ($scope, GetItemsFactory, $state, 
     $scope.adminItems= [
         { label: 'Create product', state: 'admin.itemCreate' },
         { label: 'Modify User', state: 'admin.userModify'},
-        { label: 'Modify Order', state: 'admin.orderModify'},
-        { label: 'Create Product Cat Pg', state: 'admin.productCatCreate'}
+        { label: 'Modify Order', state: 'admin.orderModify'}
     ]
-    
+
     GetItemsFactory.getItems().then(function(items, err){
         if(err) throw err;
         else{

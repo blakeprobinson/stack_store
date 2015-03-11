@@ -26,6 +26,10 @@ app.controller('orderController', function ($scope, GetItemsFactory, OrderFactor
 	$scope.userId;
 	$scope.auth;
 
+	$scope.goToCheckout = function () {
+		$state.go('checkout')
+	}
+
 	function firstUpdate (){
 	//check if user is authenticated, populate order from db, set order to cookie
 	AuthService.getLoggedInUser().then(function(user){

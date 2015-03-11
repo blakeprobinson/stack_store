@@ -27,7 +27,10 @@ app.controller('loginController', function ($scope, $window, AuthService, $state
                 } else {
                     $state.go('products')
                 }
+        $rootScope.user = info
+
         });
+
     // this is just testing sessions started
     $scope.isLoggedIn = AuthService.isAuthenticated();
     // end test

@@ -27,16 +27,16 @@ app.controller('checkoutController', function ($scope, GetItemsFactory, OrderFac
 	$scope.auth;
 
 		// Stripe Response Handler
-	$scope.stripeCallback = function (code, result) {
-			if (result.error) {
-			    window.alert('it failed! error: ' + result.error.message);
-			} else {
-			    window.alert('success! token: ' + result.id);
-			    stripeFactory.sendKey(result.id, '54fa07473fe300fd62cfef3b').then(function(data){
-			    	console.log(data)
-			    })
-			}
-	};
+	// $scope.stripeCallback = function (code, result) {
+	// 		if (result.error) {
+	// 		    window.alert('it failed! error: ' + result.error.message);
+	// 		} else {
+	// 		    window.alert('success! token: ' + result.id);
+	// 		    stripeFactory.sendKey(result.id, '54fa07473fe300fd62cfef3b').then(function(data){
+	// 		    	console.log(data)
+	// 		    })
+	// 		}
+	// };
 
 	function firstUpdate (){
 	//check if user is authenticated, populate order from db, set order to cookie
